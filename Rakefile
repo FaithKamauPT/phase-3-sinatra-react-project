@@ -1,5 +1,11 @@
-require_relative "./config/environment"
-require "sinatra/activerecord/rake"
+require_relative './config/environment'
+require 'sinatra/activerecord/rake'
+
+
+desc "rake console"
+task :console do 
+    Pry.start
+end
 
 desc "Start the server"
 task :server do  
@@ -15,10 +21,4 @@ task :server do
   # rerun allows auto-reloading of server when files are updated
   # -b runs in the background (include it or binding.pry won't work)
   exec "bundle exec rerun -b '#{rackup}'"
-end
-
-desc "Start the console"
-task :console do
-  ActiveRecord::Base.logger = Logger.new(STDOUT)
-  Pry.start
 end
