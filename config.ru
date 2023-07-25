@@ -1,6 +1,9 @@
-require_relative "./config/environment"
+require './config/environment'
 
-# Allow CORS (Cross-Origin Resource Sharing) requests
+if ActiveRecord::Base.connection.migration_context.needs_migration?
+  raise 'Migrations are pending. Run `rake db:migrate` to resolve the issue.'
+end
+
 use Rack::Cors do
   allow do
     origins '*'
@@ -8,8 +11,10 @@ use Rack::Cors do
   end
 end
 
-# Parse JSON from the request body into the params hash
 use Rack::JSONBodyParser
+use Rack::MethodOverride
 
-# Our application
+ 
 run ApplicationController
+use CatsController
+use ListingsController
