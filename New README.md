@@ -13,7 +13,7 @@ Feline is a Job Board application for quick gigs. This application was inspired 
 
 ## Description of app: 
 
-This is a single page full-stack CRUD application that has a back-end that was creating using Ruby and a sinatra API which stores data which is then fetched from : http://localhost:9393/cats and http://localhost:9393/listings. The front-end was created using React and Javascript
+This is a single page full-stack CRUD application that has a back-end that was creating using Ruby and a sinatra API which stores data which is then fetched from : http://localhost:9292/cats and http://localhost:9292/listings. The front-end was created using React and Javascript
 
 On the front end the application uses a total of 9 components: App.js, Home.js, Navigation.js, Listings.js, Listing.js, New Listing.js, EditListing.js, NewCategory.js, and Filter.js
 
