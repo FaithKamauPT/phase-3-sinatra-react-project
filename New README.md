@@ -32,3 +32,10 @@ Styling was done using CSS and Bootstrap
 - Sinatra
 - Active Record
 - Create-react-app https://create-react-app.dev/
+
+## Repository URL
+
+** Front-end**  https://github.com/FaithKamauPT/my-app-frontend
+
+**Back-end**  https://github.com/FaithKamauPT/phase-3-sinatra-react-project
+
